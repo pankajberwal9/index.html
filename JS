@@ -1,0 +1,169 @@
+// let firstName= "Pankaj"
+// let newName = firstName.slice(0,3);
+// console.log(newName);
+//  let firstName = "21"
+//  let secName = "Pankaj"
+//  console.log(typeof secName);
+//  console.log(typeof firstName)
+
+// let ist = "12";
+// let second = "11";
+// console.log(-ist - -second);
+
+// let myvariable = "null";
+// console.log(myvariable);
+// myvariable ="Pankaj"
+// console.log(myvariable, typeof myvariable)
+// let a = 1;
+// let b = 2;                                
+// console.log(a==b);
+
+// let pankaj ="21";
+// if(pankaj>20){
+//     console.log("pankaj berwal")
+// }
+// let a ="21";
+// let b="23";
+// if(a>=10){
+//     console.log("He is pankaj berwal")
+// }
+// else{
+//     console.log("she is komal")
+// }
+// //terbery operator
+// let age=10
+// let drink;
+// if (age>=5){
+//     drink ="milk"
+// }
+// console.log(drink);
+
+// conditional operator 
+// let age=1;
+// let drink = age >= 5 ? "coffee" : "milk" ;
+// console.log(drink);
+
+//and or operator 
+// let firstName= "pankaj";
+// let age = 22;
+
+// if (firstName[0] === "p"){
+//     console.log("your full name is pankaj berwal")
+// }
+// else{
+//     console.log("your name is not pankaj")
+// }
+// let firstname = prompt();
+// if(firstname[0] ==="p"){
+//     console.log("this is  dfhfduh")
+// }
+// else{
+//     console.log("Enter Other Name")
+// }
+// let winno = 19;
+// let userguess = +prompt("guess a number");
+
+// if(userguess === winno){
+//     console.log("you win congo");
+// }
+// else{
+//     console.log("you loss,better luck next time");
+// }
+
+// let winno = 21;
+// let userguess = +prompt("Guess a number");
+
+// if(userguess === winno){
+//     console.log("guess is right");
+// }else{
+//         if(userguess<winno){
+//         console.log("guess is very near");
+//     }else{
+//         console.log("guess is too far");
+//     }
+// }
+
+// let name = "pankaj";
+// let userguess = prompt("guess the name ");
+// if( userguess === "pankaj"){
+//     console.log("you guessed it right congo")
+// }else{
+//     if(userguess != "pankaj"){
+//         console.log("wrong guess")
+//     }
+// }
+
+// let temp = +prompt("guess the name ");
+// if(temp<0){
+//     console.log("extremely cold")
+// }else if(temp<5){
+// console.log("its cold ");
+// }else if(temp<10){
+//     console.log("wheather is okay");
+// }else  if (temp<=15){
+//     console.log("great weather")
+// }else if(temp<15){
+//     console.log("on ac")
+// }else{
+//     console.log("too hot")
+// }
+
+// switch function
+
+// let day =+prompt("guess the day")
+// switch(day){
+//     case 0:
+//         console.log("sunday");
+//         break;
+//     case 1:
+//     console.log("Monday");
+//     break;
+//     case 2:
+//     console.log("tuesday");
+//     break;
+//     case 3:
+//         console.log("wednesday");
+//         break;
+//         case 4:
+//             console.log("thursday");
+//             break;
+//             case 5:
+//                 console.log("friday");
+//                 break;
+//                 case 6:
+//                     console.log("saturday");
+//                     break;
+//                     default:
+//                         console.log("invaild day");
+                       
+// }
+
+
+// while loop
+function currentTime() {
+    let date = new Date(); 
+    let hh = date.getHours();
+    let mm = date.getMinutes();
+    let ss = date.getSeconds();
+    let session = "PM";
+  
+    if(hh === 0){
+        hh = 12;
+    }
+    if(hh > 12){
+        hh = hh - 12;
+        session = "PM";
+     }
+  
+     hh = (hh < 10) ? "0" + hh : hh;
+     mm = (mm < 10) ? "0" + mm : mm;
+     ss = (ss < 10) ? "0" + ss : ss;
+      
+     let time = hh + ":" + mm + ":" + ss + " " + session;
+  
+    document.getElementById("clock").innerText = time; 
+    let t = setTimeout(function(){ currentTime() }, 1000);
+  }
+  
+  currentTime();
+  
